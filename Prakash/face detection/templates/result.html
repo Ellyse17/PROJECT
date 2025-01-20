@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5 text-center">
+    <h1>Results</h1>
+    {% if image_path %}
+    <h3>Faces Detected: {{ faces }}</h3>
+    <img src="{{ image_path }}" alt="Detected Faces" class="img-fluid">
+    {% endif %}
+    {% if match_percentage %}
+    <h3>Face Match Percentage: {{ match_percentage }}%</h3>
+    {% endif %}
+    <a href="/" class="btn btn-primary mt-3">Go Back</a>
+</div>
+</body>
+</html>
